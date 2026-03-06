@@ -139,11 +139,34 @@ window.onscroll = () => {
     document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
 };
 
-// WhatsApp
+// Reserva WhatsApp
 document.getElementById('btn-reservar-agora').onclick = () => {
-    if(!cin.value || !cout.value) return;
-    const msg = `Reserva: ${selectQuarto.value}\nCheck-in: ${cin.value}\nCheck-out: ${cout.value}`;
-    window.open(`https://wa.me/5564996132715?text=${encodeURIComponent(msg)}`, '_blank');
+    const cin = document.getElementById('checkin').value;
+    const cout = document.getElementById('checkout').value;
+    const q = document.getElementById('select-quarto').value;
+
+    if(!cin || !cout) return alert("Selecione as datas!");
+
+    // Gerando os emojis via código numérico (Isso nunca falha)
+    const hotel = String.fromCodePoint(0x1F3E8); // 🏨
+    const calendario = String.fromCodePoint(0x1F4C5); // 📅
+
+    const dataIn = cin.split('-').reverse().join('/');
+    const dataOut = cout.split('-').reverse().join('/');
+
+    // Montamos a mensagem limpa
+    const mensagem = `Olá! Gostaria de reservar:
+${hotel} *${q}*
+${calendario} *Check-in:* ${dataIn}
+${calendario} *Check-out:* ${dataOut}
+Pode me confirmar a disponibilidade?`;
+
+    const numero = "5564996132715";
+    
+    // O pulo do gato: encodeURIComponent isola os caracteres especiais
+    const urlFinal = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensagem);
+    
+    window.open(urlFinal, '_blank');
 };
 
 document.addEventListener('DOMContentLoaded', renderizarSite);
