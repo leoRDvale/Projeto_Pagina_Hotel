@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Universitário Morrinhos | Conforto & Sofisticação</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Stylesheet Externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="navbar">
+        <div class="logo">HOTEL <span>MORRINHOS</span></div>
+        
+        <!-- Botão Menu Mobile -->
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#quartos">Acomodações</a></li>
+                <li><a href="#comodidades">Comodidades</a></li>
+                <li><a href="#contato">Localização</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Onde o conforto encontra a conveniência</h1>
+            <p>Sua casa em Morrinhos, ideal para o público académico, executivos e viajantes que buscam excelência.</p>
+        </div>
+    </section>
+
+    <section class="booking-container">
+        <div class="booking-bar">
+            <div class="input-group">
+                <label><i class="fa-solid fa-calendar-check"></i> Check-in</label>
+                <input type="date" id="checkin">
+            </div>
+            <div class="input-group">
+                <label><i class="fa-solid fa-calendar-xmark"></i> Check-out</label>
+                <input type="date" id="checkout">
+            </div>
+            <div class="input-group">
+                <label><i class="fa-solid fa-bed"></i> Acomodação</label>
+                <select id="select-quarto">
+                    <!-- Gerado via script.js -->
+                </select>
+            </div>
+            <button id="btn-reservar-agora" class="btn-reserve">
+                <i class="fa-brands fa-whatsapp"></i> Reservar agora
+            </button>
+        </div>
+    </section>
+
+    <section id="comodidades" class="amenities">
+        <div class="section-header">
+            <h2>Nossos Serviços</h2>
+            <p>Tudo pensado para a sua melhor experiência em Goiás</p>
+        </div>
+        <div class="amenities-grid">
+            <div class="amenity-item">
+                <i class="fa-solid fa-wifi"></i>
+                <p>Wi-Fi de Alta Velocidade</p>
+            </div>
+            <div class="amenity-item">
+                <i class="fa-solid fa-mug-hot"></i>
+                <p>Pequeno-almoço Incluso</p>
+            </div>
+            <div class="amenity-item">
+                <i class="fa-solid fa-snowflake"></i>
+                <p>Ar Condicionado</p>
+            </div>
+            <div class="amenity-item">
+                <i class="fa-solid fa-square-parking"></i>
+                <p>Estacionamento Privativo</p>
+            </div>
+            <div class="amenity-item">
+                <i class="fa-solid fa-briefcase"></i>
+                <p>Espaço Coworking</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="quartos" class="rooms-section">
+        <div class="section-header">
+            <h2>Acomodações Exclusivas</h2>
+            <p>Escolha a suíte que melhor se adapta à sua estadia</p>
+        </div>
+        <div class="rooms-grid" id="rooms-grid">
+            <!-- Gerado via script.js -->
+        </div>
+    </section>
+
+    <!-- Lightbox Galeria -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-wrapper">
+            <span class="close-lightbox">&times;</span>
+            <button class="nav-btn prev" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="nav-btn next" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+            <img src="" id="lightbox-img" class="fade">
+            <div id="caption"></div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5564996132715" class="whatsapp-fixed" target="_blank" title="Fale conosco">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <footer id="contato">
+        <div class="footer-layout">
+            <!-- Lado Esquerdo: Informações (50%) -->
+            <div class="footer-info-side">
+                <div class="footer-brand">
+                    <h3>Hotel Universitário</h3>
+                    <p>Referência em hospedagem universitária e executiva em Morrinhos, Goiás. Conforto e praticidade para sua estadia.</p>
+                </div>
+
+                <div class="footer-links-row">
+                    <div class="footer-column">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="#home">Início</a></li>
+                            <li><a href="#quartos">Quartos</a></li>
+                            <li><a href="#comodidades">Serviços</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Contato</h4>
+                        <p><i class="fa-solid fa-phone"></i> (64) 99999-8888</p>
+                        <p><i class="fa-solid fa-envelope"></i> contato@hotelmorrinhos.com.br</p>
+                    </div>
+                </div>
+
+                <div class="social-icons-horizontal">
+                    <a href="https://www.instagram.com/hoteluniversitariomorrinhos" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/hoteluniversitariomorrinhos" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="mailto:contato@hotelmorrinhos.com.br" aria-label="Email">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Lado Direito: Mapa (50%) -->
+            <div class="footer-map-side">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15194.23456789!2d-49.1000!3d-17.7333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9406f85f55555555%3A0x5555555555555555!2sMorrinhos%2C%20GO!5e0!3m2!1spt-BR!2sbr!4v1234567890" 
+                    width="85%" height="85%" style="border:60px;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Hotel Universitário Morrinhos.</p>
+        </div>
+    </footer>
+
+    <!-- Script Externo -->
+    <script src="script.js"></script>
+</body>
+</html>
